@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Events</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <h1>Student Events</h1>
+    <input type="text" id="searchInput" placeholder="Search events..." >
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Technical">Technical</option>
+        <option value="Sports">Sports</option>
+        <option value="Cultural">Cultural</option>
+        <option value="Workshop">Workshop</option>
+    </select>
+
+    <select id="sortOption">
+        <option value="default">Sort By</option>
+        <option value="title">Title</option>
+        <option value="date">Date</option>
+    </select>
+
+    <div id="eventsContainer"></div>
+    <div id="pagination"></div>
+    <script src="../JAVASCRIPT/practical-6.js"></script>
+</body>
+</html>
