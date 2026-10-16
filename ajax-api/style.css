@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; color: #222; }
+.top { background: #2c3e50; color: #fff; padding: 14px 24px; }
+.top h1 { font-size: 20px; margin: 0; }
+.container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+
+.card { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+.card h2 { margin-top: 0; font-size: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 14px; }
+label { display: block; font-weight: bold; margin-bottom: 5px; }
+input, select { width: 100%; padding: 8px; }
+.err { color: #c0392b; font-size: 13px; display: block; min-height: 16px; }
+
+.btn { display: inline-block; padding: 8px 14px; background: #e0e4ea; color: #222; border: 0;
+       border-radius: 4px; cursor: pointer; font-size: 14px; }
+.btn.primary { background: #2c3e50; color: #fff; }
+.btn.danger  { background: #c0392b; color: #fff; }
+.btn.small   { padding: 4px 10px; font-size: 13px; }
+.btn:disabled { opacity: .6; cursor: wait; }
+
+.filters { display: flex; gap: 10px; flex-wrap: wrap; }
+.filters input { flex: 1; min-width: 220px; }
+.filters select { width: 180px; }
+.meta { color: #555; margin: 10px 0; display: flex; justify-content: space-between; }
+
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+th { background: #2c3e50; color: #fff; }
+.state { text-align: center; color: #666; padding: 18px; }
+.state.loading { color: #2c3e50; font-style: italic; }
+.state.error { color: #c0392b; }
+.actions { white-space: nowrap; }
+
+.toast { position: fixed; top: 16px; right: 16px; padding: 12px 18px; border-radius: 6px;
+         color: #fff; opacity: 0; pointer-events: none; transition: opacity .25s; z-index: 10; }
+.toast.show { opacity: 1; }
+.toast.success { background: #27ae60; }
+.toast.error   { background: #c0392b; }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Manager - AJAX CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><h1>Student Manager (Fetch API + PHP JSON API)</h1></header>
+
+<main class="container">
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <section class="card">
+        <h2 id="formTitle">Add Student</h2>
+        <form id="studentForm" novalidate>
+            <input type="hidden" id="studentId">
+
+            <div class="grid">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" autocomplete="off">
+                    <span class="err" id="err-name"></span>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="off">
+                    <span class="err" id="err-email"></span>
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" maxlength="10" autocomplete="off">
+                    <span class="err" id="err-phone"></span>
+                </div>
+                <div>
+                    <label for="course">Course</label>
+                    <select id="course" name="course">
+                        <option value="">-- Select --</option>
+                        <option>BCA</option><option>MCA</option><option>B.Tech</option>
+                        <option>M.Tech</option><option>BSc IT</option>
+                    </select>
+                    <span class="err" id="err-course"></span>
+                </div>
+            </div>
+
+            <button type="submit" id="saveBtn" class="btn primary">Add Student</button>
+            <button type="button" id="cancelBtn" class="btn" hidden>Cancel edit</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Students</h2>
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search name, email or course (type and wait)" autocomplete="off">
+            <select id="courseFilter">
+                <option value="">All courses</option>
+                <option>BCA</option><option>MCA</option><option>B.Tech</option>
+                <option>M.Tech</option><option>BSc IT</option>
+            </select>
+        </div>
+        <p class="meta">
+            <span id="summary"></span>
+            <span class="right">List requests sent: <b id="callCount">0</b></span>
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Course</th><th>Actions</th></tr>
+                </thead>
+                <tbody id="rows"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
