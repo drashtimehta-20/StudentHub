@@ -1,0 +1,20 @@
+# Real credentials (example copies are committed instead)
+database/db.php
+auth/db_mysqli.php
+students-crud/config.php
+events-crud/config.php
+admin-panel/config.php
+
+# One-time scripts and test files
+seed*.php
+test.php
+
+# Uploaded posters (keep the protective .htaccess)
+events-crud/uploads/*
+!events-crud/uploads/.htaccess
+
+# Editor, OS and logs
+.vscode/
+Thumbs.db
+desktop.ini
+*.log
